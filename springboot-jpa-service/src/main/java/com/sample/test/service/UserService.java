@@ -19,4 +19,8 @@ public interface UserService {
     public User selectByName(String name) throws ServiceException;
 
     public List<User> selectByNameLike(String name) throws ServiceException;
+
+     /*public User selectByEmName(String name) throws ServiceException;
+
+     public void addByEm(User user) throws ServiceException;*/
 }

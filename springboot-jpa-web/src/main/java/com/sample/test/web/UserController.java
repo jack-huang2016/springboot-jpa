@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 /**
@@ -121,4 +120,30 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+    /*@GetMapping("/selectByEmName")
+    public ResponseEntity<User> selectByEmName(String name){
+        try {
+            User user = userService.selectByEmName(name);
+            // 成功，响应200
+            return ResponseEntity.ok(user);
+        } catch (Exception e) {
+            log.debug(e.getMessage(), e);
+            // 出错，响应500
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @PostMapping("/addByEm")
+    public ResponseEntity<Void> addByEm(User user){
+        try {
+            userService.addByEm(user);
+            // 成功，响应200
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            log.debug(e.getMessage(), e);
+            // 出错，响应500
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }*/
 }
